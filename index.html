@@ -1,1 +1,76 @@
 
+/* ANIMAÇÃO DE ENTRADA AO ACESSAR O SITE */
+
+body {
+  animation: entradaPagina 0.8s ease-out both;
+}
+
+header {
+  animation: entrarTopo 0.8s ease-out both;
+}
+
+.hero > div:first-child {
+  animation: entrarEsquerda 1s ease-out 0.2s both;
+}
+
+.hero .campo {
+  animation: entrarDireita 1s ease-out 0.4s both;
+}
+
+.faixa {
+  animation: entrarFaixa 0.8s ease-out 0.5s both;
+}
+
+@keyframes entradaPagina {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes entrarTopo {
+  from {
+    opacity: 0;
+    transform: translateY(-35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes entrarEsquerda {
+  from {
+    opacity: 0;
+    transform: translateX(-45px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes entrarDireita {
+  from {
+    opacity: 0;
+    transform: translateX(45px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes entrarFaixa {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
