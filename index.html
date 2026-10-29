@@ -1,39 +1,25 @@
 
-/* ANIMAÇÃO DE ENTRADA AO ACESSAR O SITE */
-
-body {
-  animation: entradaPagina 0.8s ease-out both;
-}
-
+/* ENTRADA DO SITE */
 header {
-  animation: entrarTopo 0.8s ease-out both;
+  animation: entradaTopo 0.8s ease-out both;
 }
 
 .hero > div:first-child {
-  animation: entrarEsquerda 1s ease-out 0.2s both;
+  animation: entradaEsquerda 0.9s ease-out 0.15s both;
 }
 
 .hero .campo {
-  animation: entrarDireita 1s ease-out 0.4s both;
+  animation: entradaDireita 1s ease-out 0.3s both;
 }
 
 .faixa {
-  animation: entrarFaixa 0.8s ease-out 0.5s both;
+  animation: entradaFaixa 0.8s ease-out 0.45s both;
 }
 
-@keyframes entradaPagina {
+@keyframes entradaTopo {
   from {
     opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes entrarTopo {
-  from {
-    opacity: 0;
-    transform: translateY(-35px);
+    transform: translateY(-25px);
   }
   to {
     opacity: 1;
@@ -41,10 +27,10 @@ header {
   }
 }
 
-@keyframes entrarEsquerda {
+@keyframes entradaEsquerda {
   from {
     opacity: 0;
-    transform: translateX(-45px);
+    transform: translateX(-35px);
   }
   to {
     opacity: 1;
@@ -52,25 +38,34 @@ header {
   }
 }
 
-@keyframes entrarDireita {
+@keyframes entradaDireita {
   from {
     opacity: 0;
-    transform: translateX(45px) scale(0.96);
+    transform: translateX(35px);
   }
   to {
     opacity: 1;
-    transform: translateX(0) scale(1);
+    transform: translateX(0);
   }
 }
 
-@keyframes entrarFaixa {
+@keyframes entradaFaixa {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(15px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  header,
+  .hero > div:first-child,
+  .hero .campo,
+  .faixa {
+    animation: none;
   }
 }
 
